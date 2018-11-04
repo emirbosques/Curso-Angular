@@ -1,0 +1,31 @@
+<div class="row">
+
+    <div class="col-6">
+        <h1>*ngIf</h1>
+        <hr>
+        <div *ngIf="mostrar" class="card text-white bg-info mb-3">
+            <div class="card-body">
+                <h5 class="card-title">{{mensaje.autor}}</h5>
+                <p class="card-text">{{mensaje.texto}}</p>
+            </div>
+
+
+        </div>
+        <button (click)=" mostrar = !mostrar" class="btn btn-outline-success btn-block">
+                Show / Hide
+            </button>
+
+    </div>
+
+    <div class="col-6">
+        <h1>*ngFor</h1>
+        <hr>
+        <ul class="list-group">
+            <li *ngFor="let sh of lista; let i = index" class="list-group-item">
+                {{i +1}} - {{sh}}</li>
+
+        </ul>
+
+    </div>
+
+</div>
